@@ -74,8 +74,9 @@ module.exports = (env, argv) => {
     },
 
     plugins: [
-      new webpack.EnvironmentPlugin({
-        PRODUCTION: !isDev
+      new webpack.DefinePlugin({
+        PRODUCTION: !isDev,
+        VERSION: JSON.stringify(env.VERSION)
       }),
       !isDev && new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({

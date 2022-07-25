@@ -16,7 +16,7 @@
   "author": "Quang Vu",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode development --env VERSION=v1.01",
     "start:dev": "npm start",
     "build": "webpack --mode production"
   },

@@ -12,9 +12,10 @@ COPY . .
 
 # install dependencies
 RUN npm ci
+ARG VERSION
 
 # build the application
-RUN npm run build
+RUN npm run build -- --env VERSION=$VERSION
 
 EXPOSE 4200
 

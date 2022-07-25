@@ -4,6 +4,8 @@ services:
     image: node:14-alpine
     build:
       context: .
+      args:
+        - VERSION=v1.00
     environment:
       - REVIEW_API=https://review-gabbar-dev.apps.devtest.41b996e9.kubeapp.cloud
     ports:
